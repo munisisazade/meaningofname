@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adının mənasını öyrən</title>
+
+</head>
+<body>
+	<form method="post">
+	    {% csrf_token %}
+		<input type="text" name="name" value="{{ kes }}">
+	    <input type="submit" value="Axtar">
+	</form>
+	{% if data %}
+	    <table border="1px">
+	    	<tr>
+	    		<td>Adi</td>
+	    		<td>{{ data.response.nameField }}</td>
+	    	</tr>
+	    	<tr>
+	    		<td>Adın mənası</td>
+	    		<td>{{ data.response.name_meaningField }}</td>
+	    	</tr>
+	    	<tr>
+	    		<td>Cinsi</td>
+	    		<td>{{ data.response.sexField }}</td>
+	    	</tr>
+	    </table>
+	{% endif %}
+</body>
+</html>

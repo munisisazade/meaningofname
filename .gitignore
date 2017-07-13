@@ -99,3 +99,8 @@ ENV/
 
 # mypy
 .mypy_cache/
+.idea/
+.venv
+db.sqlite3
+name/__pycache__/*
+basename/__pycache__/*
